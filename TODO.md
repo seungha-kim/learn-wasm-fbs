@@ -1,0 +1,5 @@
+- [x] FlatBuffers 공부
+- [ ] Flatc 써서 바이너리와 통신
+- [ ] 로직 만들기
+- [ ] Emscripten CMake toolchain 써서 빌드 해서 콘솔에서 찍기
+- [ ] 간단히 UI

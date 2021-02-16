@@ -1,0 +1,32 @@
+include "Types.fbs";
+
+namespace RPS;
+
+enum TurnResult:byte {
+    WIN, LOSE, DRAW
+}
+
+table TurnData {
+    result: TurnResult;
+    myThrowing: Throwing;
+    opponentThrowing: Throwing;
+}
+
+table GameData {
+    turnCount: uint;
+    winCount: uint;
+    drawCount: uint;
+    loseCount: uint;
+}
+
+enum GameEvent:byte {
+    IN_GAME, FINISHED
+}
+
+table GameOutput {
+    gameEvent: GameEvent;
+    prevTurnData: TurnData;
+    gameData: GameData;
+}
+
+root_type GameOutput;

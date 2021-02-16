@@ -1,0 +1,5 @@
+namespace RPS;
+
+enum Throwing:byte {
+    ROCK, PAPER, SCISSORS
+}

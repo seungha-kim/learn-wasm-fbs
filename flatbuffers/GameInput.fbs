@@ -1,0 +1,29 @@
+include "Types.fbs";
+
+namespace RPS;
+
+table TurnInput {
+    throwing: Throwing;
+}
+
+enum GameControl:byte {
+    START, STOP
+}
+
+table GameStartCommand {
+    best: uint;
+}
+
+table GameStopCommand {}
+
+union AnyInput {
+    TurnInput,
+    GameStartCommand,
+    GameStopCommand,
+}
+
+table GameInput {
+    anyInput: AnyInput;
+}
+
+root_type GameInput;
